@@ -24,6 +24,38 @@ export default function App() {
 }
 ```
 
+### Use SafeAreaHeader wrapper for headers
+
+```tsx
+import { SafeAreaHeader } from '@umituz/react-native-safe-area';
+
+function MyHeader() {
+  return (
+    <SafeAreaHeader minPadding={16} additionalPadding={16}>
+      <View>
+        <Text>Header Content</Text>
+      </View>
+    </SafeAreaHeader>
+  );
+}
+```
+
+### Use SafeAreaContent wrapper for content
+
+```tsx
+import { SafeAreaContent } from '@umituz/react-native-safe-area';
+
+function MyContent() {
+  return (
+    <ScrollView>
+      <SafeAreaContent minBottomPadding={16} additionalPadding={100}>
+        <ContentItems />
+      </SafeAreaContent>
+    </ScrollView>
+  );
+}
+```
+
 ### Use safe area hooks
 
 ```tsx
@@ -96,6 +128,8 @@ function Content() {
 ### Components
 
 - `SafeAreaProvider` - Provider component that wraps your app
+- `SafeAreaHeader` - Wrapper component for headers with automatic safe area padding
+- `SafeAreaContent` - Wrapper component for content with automatic bottom padding
 
 ### Hooks
 
