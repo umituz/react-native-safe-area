@@ -1,6 +1,6 @@
 {
   "name": "@umituz/react-native-safe-area",
-  "version": "1.3.0",
+  "version": "2.0.0", "1.3.0",
   "description": "Safe area context provider and hooks for React Native apps with web support",
   "main": "./src/index.ts",
   "types": "./src/index.ts",

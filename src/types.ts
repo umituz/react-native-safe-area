@@ -1,7 +1,5 @@
 /**
  * Safe Area Types
- *
- * Type definitions for safe area insets and frame
  */
 
 export interface SafeAreaInsets {
