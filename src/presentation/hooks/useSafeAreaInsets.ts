@@ -8,6 +8,12 @@ import { Platform } from 'react-native';
 import { useSafeAreaInsets as useNativeSafeAreaInsets } from 'react-native-safe-area-context';
 import type { SafeAreaInsets } from '../../domain/entities/SafeAreaTypes';
 
+// Type declaration for window (web only)
+declare const window: {
+  self?: Window;
+  top?: Window;
+} | undefined;
+
 /**
  * Get safe area insets
  *

@@ -30,4 +30,7 @@ export type { SafeAreaProviderProps } from './presentation/components/SafeAreaPr
 
 export { useSafeAreaInsets } from './presentation/hooks/useSafeAreaInsets';
 export { useSafeAreaFrame } from './presentation/hooks/useSafeAreaFrame';
+export { useHeaderSafeAreaPadding } from './presentation/hooks/useHeaderSafeAreaPadding';
+export { useStatusBarSafeAreaPadding } from './presentation/hooks/useStatusBarSafeAreaPadding';
+export { useContentSafeAreaPadding } from './presentation/hooks/useContentSafeAreaPadding';
 

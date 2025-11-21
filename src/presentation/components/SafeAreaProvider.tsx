@@ -12,6 +12,14 @@ import {
 } from 'react-native-safe-area-context';
 import type { SafeAreaMetrics } from '../../domain/entities/SafeAreaTypes';
 
+// Type declaration for window (web only)
+declare const window: {
+  self?: Window;
+  top?: Window;
+  innerWidth?: number;
+  innerHeight?: number;
+} | undefined;
+
 export interface SafeAreaProviderProps {
   children: ReactNode;
   initialMetrics?: SafeAreaMetrics;
@@ -43,8 +51,8 @@ export const SafeAreaProvider: React.FC<SafeAreaProviderProps> = ({
           frame: {
             x: 0,
             y: 0,
-            width: typeof window !== 'undefined' ? window.innerWidth : 390,
-            height: typeof window !== 'undefined' ? window.innerHeight : 844,
+            width: typeof window !== 'undefined' && window.innerWidth ? window.innerWidth : 390,
+            height: typeof window !== 'undefined' && window.innerHeight ? window.innerHeight : 844,
           },
         };
       }
